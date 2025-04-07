@@ -151,9 +151,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Font fusion script using fontTools with configuration file"
     )
-    parser.add_argument(
-        "config", help="Path to configuration file (TOML, YAML, or JSON)"
-    )
+    parser.add_argument("config", help="Path to json configuration file")
     args = parser.parse_args()
 
     # Load configuration
