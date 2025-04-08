@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -31,6 +31,7 @@ jobs:
       - name: Create release ZIP file
         run: |
           cd output
+          cp ../OFL.txt fonts/OFL.txt
           zip -r ../JetMaple-Mono-${{ github.ref_name }}.zip fonts/
 
       - name: Create GitHub Release
@@ -38,13 +39,13 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
-          name: JetMaple Mono (${{ github.ref_name }})
+          name: ${{ github.ref_name }}
           draft: false
           prerelease: false
           files: |
             JetMaple-Mono-${{ github.ref_name }}.zip
           body: |
-            # JetMaple Mono Release
+            # JetMaple Mono
 
             **Release Tag:** `${{ github.ref_name }}`
 
