@@ -4,20 +4,20 @@ Fusion of [JetBrains Mono](https://www.jetbrains.com/lp/mono/) and [Maple Mono](
 
 **JetMaple Mono is currently built with:**
 
-- JetBrains Mono: 2.304
-- Maple Mono: 7.0
+- JetBrains Mono: v2.304
+- Maple Mono CN unhinted: V7.0
 
 ## Features
 
 1. JetBrains Mono for regular text with Maple Mono for italics
 2. Ligatures support.
-3. CJK support from Maple Mono.
+3. Chinese and Japanese support from Maple Mono.
 
 ## Installation
 
 **Option 1: Download the Pre-built Fonts**
 
-Download the latest releases from the [Releases page](https://github.com/yilinfang/JetMaple-Mono/releases) and install the TTF files.
+Download the latest releases from the [Releases](https://github.com/yilinfang/JetMaple-Mono/releases) and install the TTF files.
 
 **Option 2: Build from Source**
 
@@ -32,11 +32,11 @@ cd JetMaple-Mono
 
 # Set up Python environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 
 # Build the fonts
-chmod +x build.sh  # On Windows: use build.bat or PowerShell
+chmod +x build.sh
 ./build.sh
 
 # Find the generated fonts in the output/fonts directory
