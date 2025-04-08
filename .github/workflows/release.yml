@@ -1,0 +1,55 @@
+name: Build and Release JetMaple Mono
+
+on:
+  push:
+    tags:
+      - "*" # Trigger on any tag
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Build JetMaple Mono fonts
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Create release ZIP file
+        run: |
+          cd output
+          zip -r ../JetMaple-Mono-${{ github.ref_name }}.zip fonts/
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: JetMaple Mono (${{ steps.date.outputs.DATE }})
+          draft: false
+          prerelease: false
+          files: |
+            JetMaple-Mono-${{ github.ref_name }}.zip
+          body: |
+            # JetMaple Mono Release
+
+            **Release Tag:** `${{ github.ref_name }}`  
+
+            JetMaple Mono is a font that combines JetBrains Mono and Maple Mono fonts.
+
+            ## Installation
+
+            Extract the ZIP file and install the TTF files using your system's font installation method.

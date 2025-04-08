@@ -6,5 +6,6 @@
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python -m merge.py config.json
+chmod +x build.sh
+./build.sh
 ```
