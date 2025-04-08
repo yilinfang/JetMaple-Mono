@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-import os
-import sys
 import argparse
 import json
-from fontTools.ttLib import TTFont
-from fontTools.merge import Merger
+import os
+import sys
 
+from fontTools.merge import Merger
+from fontTools.ttLib import TTFont
 from tqdm import tqdm
 
 
