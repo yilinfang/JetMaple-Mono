@@ -9,7 +9,7 @@ Fusion of [JetBrains Mono](https://www.jetbrains.com/lp/mono/) and [Maple Mono](
 
 ## Features
 
-1. JetBrains Mono for regular text with Maple Mono for italics
+1. JetBrains Mono for regular text with Maple Mono for italics.
 2. Ligatures support.
 3. Chinese and Japanese support from Maple Mono.
 
