@@ -38,7 +38,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
-          name: JetMaple Mono (${{ githu.ref_name }})
+          name: JetMaple Mono (${{ github.ref_name }})
           draft: false
           prerelease: false
           files: |
