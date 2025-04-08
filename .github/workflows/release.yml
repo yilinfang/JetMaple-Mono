@@ -38,7 +38,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
-          name: JetMaple Mono (${{ steps.date.outputs.DATE }})
+          name: JetMaple Mono (${{ githu.ref_name }})
           draft: false
           prerelease: false
           files: |
@@ -46,7 +46,7 @@ jobs:
           body: |
             # JetMaple Mono Release
 
-            **Release Tag:** `${{ github.ref_name }}`  
+            **Release Tag:** `${{ github.ref_name }}`
 
             JetMaple Mono is a font that combines JetBrains Mono and Maple Mono fonts.
 
