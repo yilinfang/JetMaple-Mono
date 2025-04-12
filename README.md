@@ -38,10 +38,13 @@ pip install -r requirements.txt
 # Build the fonts
 chmod +x build.sh
 ./build.sh
-
-# Find the generated fonts in the output/fonts directory
-
 ```
+
+The built fonts will be located in the `output` directory.
+
+## Usage
+
+After installing the TTF font files, you can use JetMaple Mono by setting your favorite code editor or terminal emulator' font to `JetMaple Mono`.
 
 ## License
 
