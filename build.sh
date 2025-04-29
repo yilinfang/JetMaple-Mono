@@ -22,7 +22,7 @@ done
 
 # Font download URLs
 JETBRAINS_URL="https://github.com/JetBrains/JetBrainsMono/releases/download/v2.304/JetBrainsMono-2.304.zip"
-MAPLE_URL="https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMono-CN-unhinted.zip"
+MAPLE_URL="https://github.com/subframe7536/maple-font/releases/download/v7.2/MapleMono-CN-unhinted.zip"
 
 # Default configuration
 if [ -z "$CONFIG_FILE" ]; then
