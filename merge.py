@@ -12,14 +12,12 @@ from tqdm import tqdm
 def load_config(config_path):
     """Load configuration from a JSON file"""
     file_ext = os.path.splitext(config_path)[1].lower()
-
-    with open(config_path, "rb" if file_ext == ".toml" else "r") as f:
-        if file_ext == ".json":
-            return json.load(f)
-        else:
-            print(f"Error: Unsupported configuration file format: {file_ext}")
-            print("Supported formats: .json")
-            sys.exit(1)
+    if file_ext != ".json":
+        print(f"Error: Unsupported configuration file format: {file_ext}")
+        print("Supported formats: .json")
+        sys.exit(1)
+    with open(config_path) as f:
+        return json.load(f)
 
 
 def process_regular_font(jb_path, maple_path, output_path):
