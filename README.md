@@ -5,7 +5,7 @@ Fusion of [JetBrains Mono](https://www.jetbrains.com/lp/mono/) and [Maple Mono](
 **JetMaple Mono is currently built with:**
 
 - JetBrains Mono: v2.304
-- Maple Mono CN unhinted: V7.5
+- Maple Mono CN unhinted: V7.6
 
 ## Features
 
